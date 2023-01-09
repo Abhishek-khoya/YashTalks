@@ -1,0 +1,15 @@
+.example-name {
+    width: 100%;
+  }
+.form
+{
+    width: 25%;
+    margin-top: 10%;
+    margin: auto;
+    height: auto;
+    padding: 30px;
+    border-radius: 5%;
+    box-shadow: 3px 3px 3px 3px #ccc;
+    justify-content: center;
+    display: flex;
+}

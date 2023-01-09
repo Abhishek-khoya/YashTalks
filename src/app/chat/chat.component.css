@@ -1,0 +1,25 @@
+.example-form
+{
+    width: 92%;
+}
+.contactCard
+{
+    margin-left: 10px;
+    height: 650px;
+}
+.chatCard
+{
+    margin-right: 10px;
+    height:500px
+}
+.messageCard
+{
+    margin-right:10px;
+}
+.messageBubble
+{
+    width:auto;
+    height:auto;
+    background-color: lightseagreen;
+    border-radius: 5px;
+}

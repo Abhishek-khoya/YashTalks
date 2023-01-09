@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "yashtalks": {
+      "hosting": {
+        "YashTalks": [
+          "yashtalks"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "yashtalks"
+  }
+}

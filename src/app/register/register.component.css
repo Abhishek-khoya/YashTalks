@@ -1,0 +1,15 @@
+.example-full-width {
+    width: 92.5%;
+  }
+  .example-name {
+    width: 45%;
+  }
+.form
+{
+    margin: auto;
+    height: auto;
+    width: 40%;
+    padding: 30px;
+    border-radius: 5%;
+    box-shadow: 3px 3px 3px 3px #ccc;
+}

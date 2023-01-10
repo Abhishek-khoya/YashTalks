@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "yashtalk-532c6": {
+      "hosting": {
+        "YashTalks": [
+          "yashtalk-532c6"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "yashtalk-532c6"
+  }
+}

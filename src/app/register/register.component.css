@@ -5,11 +5,56 @@
     width: 40%;
   }
 .form
-{
-    margin: auto;
-    height: auto;
-    width: 40%;
-    padding: 30px;
-    border-radius: 5%;
-    box-shadow: 3px 3px 3px 3px #ccc;
+{    margin: 0 10px;
+  height: auto;
+  padding: 30px;
+  box-shadow: 0 0 0 white;
+}
+.parent {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTC8RiZdhjZNFPBkQTJvPd7sQd1KqUA6dE1A&usqp=CAU');
+  display: flex;
+  padding: 20px;
+  justify-content: center;
+  background-size: 100% 100%;
+}
+
+mdc-card-header img {
+  width: 100px;
+}
+
+img {
+}
+
+mat-card-header.mat-mdc-card-header img {
+  width: 100px;
+}
+
+.left {
+  width: 50%;
+}
+
+.right {
+  /* height: 100%; */
+  display: flex;
+  padding: 26px 0px;
+}
+
+.right-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+mat-card.mat-mdc-card.mdc-card {
+  justify-content: center;
+}
+
+mat-card-subtitle.subtitle.mat-mdc-card-subtitle {
+  padding: 10px;
 }

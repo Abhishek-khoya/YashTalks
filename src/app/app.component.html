@@ -1,0 +1,38 @@
+<mat-sidenav-container fullscreen>
+  <mat-sidenav #sidenav>
+    <mat-nav-list (click)="sidenav.close()">
+      <a mat-list-item routerLink="contacts/create">
+        <span>&nbsp;Add Contact</span><mat-icon style="float: left;">add_box</mat-icon>
+      </a>
+      <a mat-list-item routerLink="contacts/contacts-list"> 
+        <span>&nbsp;Contact List</span><mat-icon style="float: left;">list</mat-icon>
+      </a>
+      <a mat-list-item routerLink="contacts/contactslist"> 
+        <span>&nbsp;Contacts List</span><mat-icon style="float: left;">list</mat-icon>
+      </a>
+     
+    </mat-nav-list>
+  </mat-sidenav>
+<div>
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <button  mat-icon-button (click)="sidenav.open()" class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span class="example-spacer"></span>
+      
+      <ng-template #loginButton>
+        <button mat-raised-button color="accent">
+          <mat-icon>login</mat-icon>
+          Login
+        </button>
+      </ng-template>
+     
+    </mat-toolbar-row>
+  </mat-toolbar>
+</div>
+ <!-- <app-contactlists></app-contactlists> -->
+<router-outlet></router-outlet>
+</mat-sidenav-container>
+<app-list-contact></app-list-contact>
+<!-- <app-create-contact></app-create-contact> -->

@@ -1,0 +1,71 @@
+<div class="col-md-12">
+    <div class="col-md-8">
+    <div class="container">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Id</th>
+              <th scope="col">Contact Name</th>
+              <th scope="col">Email Address</th>
+              <th scope="col">Phone Number</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of allContacts">
+              <th scope="row">{{ item.contactId }}</th>
+              <td>{{ item.contactName }}</td>
+              <td>{{ item.emailAddress }}</td>
+              <td>{{ item.phoneNumber }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    
+</div>
+<div class="col-md-4">
+<!-- <form [formGroup]="contactfrm" (ngSubmit)="addContact()">
+    <mat-form-field appearance="fill">
+        <input formControlName="contactId" matInput >   
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+        <input formControlName="contactName" matInput placeholder="contact Name" required>   
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+        <mat-label>Phone Number</mat-label>
+        <span matPrefix>+91 &nbsp;</span>
+        <input formControlName="phoneNumber" type="text" matInput placeholder="phone number" required>
+        <mat-icon matSuffix>dialpad</mat-icon>
+         </mat-form-field>
+    <br>
+  <mat-form-field appearance="fill">
+    <mat-label>Email</mat-label>
+    <input type="email" matInput formControlName="emailAddress" placeholder="Ex. test@example.com" required>
+    <mat-icon matSuffix>email</mat-icon>
+    </mat-form-field> -->
+    <div class="container">
+        <legend>Create Item</legend>
+        <form>
+          <div class="mb-3">
+            <label for="txtName" class="form-label">Name</label>
+            <input type="text" name="contactName" [(ngModel)] = "contactfrm.contactName" class="form-control" id="txtcontactName" />
+          </div>
+          <div class="mb-3">
+            <label for="txtPrice" class="form-label">Email</label>
+            <input type="email" name="emailAddress" [(ngModel)] = "contactfrm.emailAddress" class="form-control" id="txtemailAddress" />
+          </div>
+          <div class="mb-3">
+            <label for="txtQuantity" class="form-label">Quantity</label>
+            <input type="text" name="phoneNumber" [(ngModel)] = "contactfrm.phoneNumber" class="form-control" id="txtphoneNumber" />
+          </div>
+          <button type="button" (click)="create()" class="btn btn-primary">Create</button>
+        </form>
+      </div>
+
+<!-- <div>
+    <button mat-raised-button color="warn" mat-dialog-close>Cancel</button>
+    <button style="margin: left 8px;" mat-raised-button color="primary" type="submit"  >Add</button>
+</div> -->
+
+</div>

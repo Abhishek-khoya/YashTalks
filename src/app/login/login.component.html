@@ -3,12 +3,12 @@
         <div class="login">
             <mat-card class="form">
                 <mat-card-header>
+                    <mat-icon
+                        style="margin-left: 0px;padding-right: 10px;margin-top: 5px;border-right: 1px dotted gray;margin-right: 10px;">account_circle</mat-icon>
                     <h1>Login</h1>
                 </mat-card-header>
                 <mat-card-content>
-                    <div class="example-name" color="primary">
-                        <mat-icon style="margin-left:130px">account_circle</mat-icon>
-                    </div><br>
+                    <br>
                     <form [formGroup]="loginForm">
                         <mat-form-field class="example-name">
                             <mat-label>Email</mat-label>
@@ -36,9 +36,10 @@
                                 Password</mat-error>
                             <mat-error *ngIf="loginForm.controls['password'].hasError('pattern')"></mat-error>
                         </mat-form-field><br>
-                        <div>
-                            <button mat-raised-button color="primary" (click)="loginUser()">Login</button>&nbsp;
+                        <div style=" display: flex; justify-content: flex-end; ">
                             <button mat-raised-button color="accent" routerLink="/register">Sign Up</button>
+                            <button mat-raised-button color="primary" style=" margin-left: 10px; "
+                                (click)="loginUser()">Login</button>&nbsp;
                         </div>
                     </form>
                 </mat-card-content>
@@ -49,7 +50,7 @@
         <mat-card>
             <mat-card-content class="right-card">
                 <mat-card-header>
-                    <img src="https://play-lh.googleusercontent.com/9AZOTXU_CpreTFAXUPAmJNkm8VGCb1C90fjJ9pHGcVmpGMDSTq3cUbaQJdBT9Tdp9A"
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGoZfamSlNAJlRkT10LHeTE_fv0fyZgvlwwtQYrdBM2fLEoQO4qvwRH5MLkJw9sSoc7Lg&usqp=CAU"
                         alt="YashTalks">
                 </mat-card-header>
                 <mat-card-title>

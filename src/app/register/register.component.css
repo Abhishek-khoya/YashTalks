@@ -1,17 +1,17 @@
 .example-full-width {
-    width: 100%;
-  }
-  .example-name {
-    width: 40%;
-  }
-.form
-{    margin: 0 10px;
+  width: 100%;
+}
+.example-name {
+  width: 40%;
+}
+.form {
+  margin: 0 59px;
   height: auto;
   padding: 30px;
   box-shadow: 0 0 0 white;
 }
 .parent {
-  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTC8RiZdhjZNFPBkQTJvPd7sQd1KqUA6dE1A&usqp=CAU');
+  background-image: url("https://img.freepik.com/free-vector/minimalist-blue-brush-strokes-background_91008-263.jpg");
   display: flex;
   padding: 20px;
   justify-content: center;

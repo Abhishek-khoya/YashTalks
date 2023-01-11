@@ -1,0 +1,14 @@
+.my
+{
+   
+    justify-content: center;
+    display: flex;
+}
+.form
+{
+    box-shadow: 3px 3px 3px 3px #ccc;
+    justify-content: center;
+    display: flex;
+    width: 400px;
+    height: 200px;
+}   

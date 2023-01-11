@@ -1,0 +1,61 @@
+<mat-sidenav-container fullscreen>
+  <mat-sidenav #sidenav>
+    <mat-nav-list (click)="sidenav.close()">
+      <a mat-list-item routerLink="add/course">
+        <span>&nbsp;Add Contact</span><mat-icon style="float: left;">add_box</mat-icon>
+      </a>
+      
+      <a mat-list-item routerLink="courses"> 
+        <span>&nbsp;Contact List</span><mat-icon style="float: left;">list</mat-icon>
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+<div>
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <ng-container *ngIf="firebaseService.currentUser$ | async as user;" >
+        <button mat-icon-button (click)="sidenav.open()" class="example-icon" aria-label="Example icon-button with menu icon">
+          <mat-icon>menu</mat-icon>
+        </button>&nbsp;
+      </ng-container>
+      <span>Yash Talks</span>
+      <span class="example-spacer"></span>
+      <ng-container *ngIf="firebaseService.currentUser$ | async as user; else loginButton">
+       
+        <a mat-button [matMenuTriggerFor]="dropdown">
+          <mat-icon matSuffix>account_circle</mat-icon><span> {{user?.displayName}}</span>&nbsp;
+        </a>
+        <mat-menu #dropdown>
+          <button mat-button (click)="openDialog()">
+            <mat-icon>person</mat-icon>
+            profile
+          </button>
+          <br>
+          <button mat-button (click)="logout()">
+            <mat-icon>logout</mat-icon>
+            Logout
+          </button>
+        </mat-menu>
+      </ng-container>
+      <ng-template #loginButton>
+        <button mat-raised-button color="accent" routerLink="/login">
+          <mat-icon>login</mat-icon>
+          Login
+        </button>
+      </ng-template>
+      <!-- <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <mat-icon>favorite</mat-icon>
+      </button>
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+        <mat-icon>share</mat-icon>
+      </button> -->
+    </mat-toolbar-row>
+    <!-- <mat-toolbar-row>
+      <span>Second Line</span>
+    </mat-toolbar-row> -->
+  </mat-toolbar>
+</div>
+
+  <!-- <mat-progress-bar mode="indeterminate"></mat-progress-bar> -->
+<router-outlet></router-outlet>
+</mat-sidenav-container>

@@ -1,0 +1,86 @@
+<br>
+<mat-card class="form" style="background-image: url(../../assets/signup.jpg);">
+    <mat-card-header>
+        <h1>Sign Up</h1>
+    </mat-card-header>
+    <mat-card-content>
+        <form [formGroup]="userForm" >
+            <mat-form-field class="example-name">
+                <mat-label>First Name</mat-label>
+                <input matInput formControlName="firstName" placeholder="First Name"><mat-icon
+                    matSuffix>person</mat-icon>
+                <mat-error *ngIf="userForm.controls['firstName'].hasError('required')">First name is
+                    required</mat-error>
+                <mat-error *ngIf="userForm.controls['firstName'].hasError('pattern')">Only Alphabates</mat-error>
+            </mat-form-field>
+            &nbsp;
+            <mat-form-field class="example-name">
+                <mat-label>Last Name</mat-label>
+                <input matInput formControlName="lastName" placeholder="Last Name"><mat-icon matSuffix>person</mat-icon>
+                <mat-error *ngIf="userForm.controls['lastName'].hasError('required')">Last name is required</mat-error>
+                <mat-error *ngIf="userForm.controls['lastName'].hasError('pattern')">Only Alphabates</mat-error>
+            </mat-form-field>
+            <br>
+            <mat-form-field class="example-full-width">
+                <mat-label>Mobile Number</mat-label>
+                <input matInput formControlName="phoneNumber" type="number"><mat-icon matSuffix>dialpad</mat-icon>
+                <mat-error *ngIf="userForm.controls['phoneNumber'].hasError('required')">Phone Number
+                    required</mat-error>
+                <mat-error *ngIf="userForm.controls['phoneNumber'].hasError('pattern')">&nbsp;Please enter 10 Digit
+                    Phone Number</mat-error>
+            </mat-form-field>
+            <br>
+            <mat-form-field class="example-full-width">
+                <mat-label>Email</mat-label>
+                <input matInput formControlName="email"><mat-icon matSuffix>email</mat-icon>
+                <mat-error *ngIf="userForm.controls['email'].hasError('email')">
+                    Please enter a valid email address
+                </mat-error>
+                <mat-error *ngIf="userForm.controls['email'].hasError('required')">
+                    Email is <strong>required</strong>
+                </mat-error>
+            </mat-form-field>
+            <br>
+            <mat-form-field class="example-full-width">
+                <mat-label>User Name</mat-label>
+                <input matInput formControlName="displayName"><mat-icon matSuffix>alternate_email</mat-icon>
+                <mat-error *ngIf="userForm.controls['displayName'].hasError('required')">User Name is required</mat-error>
+                <mat-error *ngIf="userForm.controls['displayName'].hasError('maxlength')">You can use only 32 characters
+                </mat-error>
+                <mat-error *ngIf="userForm.controls['displayName'].hasError('minlength')">Use 6 digit User Name</mat-error>
+            </mat-form-field>
+            <br>
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Enter your password</mat-label>
+                <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                    [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+                <mat-error *ngIf="userForm.controls['password'].hasError('required')">Password is required</mat-error>
+                <mat-error *ngIf="userForm.controls['password'].hasError('maxlength')">Use 32 digit Password</mat-error>
+                <mat-error *ngIf="userForm.controls['password'].hasError('minlength')">Use 6 digit Password</mat-error>
+            </mat-form-field>
+            <br>
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Confirm your password</mat-label>
+                <input matInput [type]="hide1 ? 'password' : 'text'" formControlName="confirmPassword">
+                <button mat-icon-button matSuffix (click)="hide1 = !hide1" [attr.aria-label]="'Hide password'"
+                    [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide1 ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+                <mat-error *ngIf="userForm.controls['confirmPassword'].hasError('required')">Password is
+                    required</mat-error>
+                <mat-error *ngIf="userForm.controls['confirmPassword'].hasError('maxlength')">Use 32 digit
+                    Password</mat-error>
+                <mat-error *ngIf="userForm.controls['confirmPassword'].hasError('minlength')">Use 6 digit
+                    Password</mat-error>
+            </mat-form-field>
+            <mat-error *ngIf="userForm.errors?.['passwordsDontMatch']">
+                Passwords should match
+            </mat-error>
+            <br>
+            <button mat-raised-button color="primary" (click)="registerUser()">Sign Up</button>&nbsp;
+        </form>
+    </mat-card-content>
+</mat-card>

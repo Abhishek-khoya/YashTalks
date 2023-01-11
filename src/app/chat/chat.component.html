@@ -1,0 +1,57 @@
+<br>
+<div style="float: left; width: 25%">
+    <mat-card class="contactCard">
+        <mat-card-header>
+            <h1>
+                Contact List
+            </h1>
+        </mat-card-header>
+        <mat-card-content>
+            <mat-list>
+                <mat-list-item (click)="cool()">
+                  <span matListItemTitle>Nitin</span>
+                  <span matListItemLine>7890098765</span>
+                </mat-list-item>
+                <mat-list-item>
+                  <span matListItemTitle>Ritik</span>
+                  <span>9674839032</span>
+                </mat-list-item>
+                <mat-list-item>
+                  <span matListItemTitle>Pratik</span>
+                  <span>8907659043</span>
+                </mat-list-item>
+              </mat-list>
+        </mat-card-content>
+    </mat-card>
+</div>
+<div style="float: right; width:74%">
+    <mat-card class="chatCard">
+        <mat-card-header>
+            <h1>Chats</h1>
+    </mat-card-header>
+    <mat-card-content>
+        <!-- <div *ngFor="let message of messageList">
+            <mat-label>
+              
+                <div class="messageBubble">
+                    <h3>{{message}}</h3>
+                </div>
+            </mat-label>
+        </div> -->
+    </mat-card-content>
+</mat-card>
+<div><br>
+    <mat-card class="messageCard">
+        <mat-card-content>
+            <br>
+            <mat-form-field class="example-form" style="margin-right: 20px; margin-left: 10px;">
+                <mat-label>Type new message</mat-label>
+                <input matInput [(ngModel)]="newMessage" (keyup)="$event.keyCode == 13 && sendMessage()" />
+            </mat-form-field>
+            <button mat-fab color="primary" aria-label="send button" (click)="sendMessage()">
+                <mat-icon>send</mat-icon>
+            </button>
+        </mat-card-content>
+    </mat-card>
+</div>
+</div>

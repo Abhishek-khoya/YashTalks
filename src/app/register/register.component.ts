@@ -46,17 +46,17 @@ export class RegisterComponent {
       confirmPassword: ['', [Validators.required, Validators.minLength(6), Validators.maxLength(32), Validators.pattern('^[A-Za-z0-9!@#$%^&*()]+$')]]
     }, { validators: passwordsMatchValidator() })
   }
-
   registerUser() {
     if (this.userForm.valid) {
       this.firebaseService.signUp(this.userForm.value)
         .subscribe({
           next: () => {
             const db = getDatabase();
-            set(ref(db, 'users/' + this.userForm.value.displayName), {
+            set(ref(db, 'users/'), {
               firstName: this.userForm.value.firstName,
               lastName: this.userForm.value.lastName,
               email: this.userForm.value.email,
+              displayName:this.userForm.value.displayName,
               phoneNumber: this.userForm.value.phoneNumber,
               password: this.userForm.value.password
             });

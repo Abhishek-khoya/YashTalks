@@ -1,4 +1,4 @@
-<br><br><br><br>
+<!-- <br><br><br><br>
 <mat-card style="background-image: url(../../assets/login.jpg);" class="form">
     <mat-card-header>
         <h1>Login</h1>
@@ -34,4 +34,70 @@
             </div>
         </form>
     </mat-card-content>
-</mat-card>
+</mat-card> -->
+
+    <div class="parent">
+        <div class="left">
+        <div class="login">
+            <mat-card class="form">
+                <mat-card-header>
+                    <mat-icon
+                        style="margin-left: 0px;padding-right: 10px;margin-top: 5px;border-right: 1px dotted gray;margin-right: 10px;">account_circle</mat-icon>
+                    <h1>Login</h1>
+                </mat-card-header>
+                <mat-card-content>
+                    <br>
+                    <form [formGroup]="loginForm">
+                        <mat-form-field class="example-name">
+                            <mat-label>Email</mat-label>
+                            <input matInput formControlName="email" autocomplete="off"><mat-icon
+                                matSuffix>email</mat-icon>
+                            <mat-error *ngIf="loginForm.controls['email'].hasError('required')">Email is
+                                required</mat-error>
+                                <mat-error *ngIf="loginForm.controls['email'].hasError('email')">Enter valid email
+                                    address</mat-error>
+                                </mat-form-field>
+                                <br>
+                                <mat-form-field appearance="fill" class="example-name">
+                                    <mat-label>Enter your password</mat-label>
+                                    <input matInput [type]="hide ? 'password' : 'text'" formControlName="password"
+                                    autocomplete="off">
+                                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                                    [attr.aria-pressed]="hide">
+                                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                                </button>
+                                <mat-error *ngIf="loginForm.controls['password'].hasError('required')">Password is
+                                    required</mat-error>
+                                    <mat-error *ngIf="loginForm.controls['password'].hasError('maxlength')">Use 12 digit
+                                        Password</mat-error>
+                                        <mat-error *ngIf="loginForm.controls['password'].hasError('minlength')">Use 6 digit
+                                            Password</mat-error>
+                                            <mat-error *ngIf="loginForm.controls['password'].hasError('pattern')"></mat-error>
+                                        </mat-form-field><br>
+                                        <div style=" display: flex; justify-content: flex-end; ">
+                                            <button mat-raised-button color="accent" routerLink="/register">Sign Up</button>
+                            <button mat-raised-button color="primary" style=" margin-left: 10px; "
+                            (click)="loginUser()">Login</button>&nbsp;
+                        </div>
+                    </form>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+    <div class="right">
+        <mat-card>
+            <mat-card-content class="right-card">
+                <mat-card-header>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGoZfamSlNAJlRkT10LHeTE_fv0fyZgvlwwtQYrdBM2fLEoQO4qvwRH5MLkJw9sSoc7Lg&usqp=CAU"
+                        alt="YashTalks">
+                </mat-card-header>
+                <mat-card-title>
+                    Yash Talks
+                </mat-card-title>
+                <mat-card-subtitle>
+                    Connect to your near ones with Yash Talks
+                </mat-card-subtitle>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

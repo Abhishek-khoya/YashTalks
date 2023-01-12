@@ -5,3 +5,18 @@
   {
     width: 300px;
   }
+.logo 
+{
+ background: white;
+ width: 126px;
+ border-radius: 3px;
+ padding: 9px;
+ height: 40px;
+ box-shadow: 0 0 5px white;
+}
+
+.logo img 
+{
+ width: 95%;
+ margin: -10px 1px 0px 2px;
+}

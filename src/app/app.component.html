@@ -1,11 +1,11 @@
 <mat-sidenav-container fullscreen>
   <mat-sidenav #sidenav>
     <mat-nav-list (click)="sidenav.close()">
-      <a mat-list-item routerLink="add/course">
+      <a mat-list-item (click)="addContact()">
         <span>&nbsp;Add Contact</span><mat-icon style="float: left;">add_box</mat-icon>
       </a>
-      <a mat-list-item routerLink="courses"> 
-        <span>&nbsp;Contact List</span><mat-icon style="float: left;">list</mat-icon>
+      <a mat-list-item routerLink="chating"> 
+        <span>&nbsp; Chats</span><mat-icon style="float: left;">list</mat-icon>
       </a>
     </mat-nav-list>
   </mat-sidenav>
@@ -17,7 +17,9 @@
           <mat-icon>menu</mat-icon>
         </button>&nbsp;
       </ng-container>
-      <span>Yash Talks</span>
+      <div class="logo">
+        <img src="https://drive.google.com/uc?export=view&id=1vd4NGVWJ7YEYyUI6tMqx2teqf-vZGXzz" alt="Logo">
+      </div>
       <span class="example-spacer"></span>
       <ng-container *ngIf="firebaseService.currentUser$ | async as user; else loginButton">
        
@@ -25,6 +27,11 @@
           <mat-icon matSuffix>account_circle</mat-icon><span> {{user?.displayName}}</span>&nbsp;
         </a>
         <mat-menu #dropdown>
+          <button mat-button (click)="openDialog()">
+            <mat-icon>person</mat-icon>
+            profile
+          </button>
+          <br>
           <button mat-button (click)="logout()">
             <mat-icon>logout</mat-icon>
             Logout

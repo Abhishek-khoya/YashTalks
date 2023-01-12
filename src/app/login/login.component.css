@@ -1,15 +1,65 @@
 .example-name {
-    width: 100%;
-  }
-.form
-{
-    width: 25%;
-    margin-top: 10%;
-    margin: auto;
-    height: auto;
-    padding: 30px;
-    border-radius: 5%;
-    box-shadow: 3px 3px 3px 3px #ccc;
-    justify-content: center;
-    display: flex;
+  width: 100%;
+}
+.form {
+  margin-top: 10%;
+  margin: auto;
+  height: auto;
+  padding: 30px;
+  /* border-radius: 5%; */
+  /* box-shadow: 1px 1px 1px 1px #ccc; */
+  justify-content: center;
+  margin: 15px 45px;
+  display: flex;
+}
+.parent {
+  display: flex;
+  padding: 20px;
+  justify-content: center;
+  background-size: 100% 100%;
+  height: 86%;
+  background-image: url("https://img.freepik.com/free-vector/minimalist-blue-brush-strokes-background_91008-263.jpg");
+}
+mdc-card-header img {
+  width: 100px;
+}
+
+img {
+}
+
+mat-card-header.mat-mdc-card-header img {
+  width: 100px;
+}
+
+.left {
+  width: 50%;
+  height:40%;
+}
+
+.right {
+  /* height: 100%; */
+  display: flex;
+  padding: 26px 0px;
+}
+
+.right-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+mat-card.mat-mdc-card.mdc-card {
+  justify-content: center;
+  height: 57.5%;
+  
+}
+
+mat-card-subtitle.subtitle.mat-mdc-card-subtitle {
+  padding: 10px;
 }

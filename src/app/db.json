@@ -1,0 +1,35 @@
+{
+  "contacts": [
+    {
+      "name": "nehal",
+      "mobileno": 7899871234,
+      "email": "nehal@gmail.com",
+      "id": 3
+    },
+    {
+      "name": "Abhishek",
+      "mobileno": 8907690876,
+      "email": "abhishek@gmail.com",
+      "id": 5
+    }
+  ],
+  "Users": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    },
+    {
+      "firstName": "Abhishek",
+      "lastName": "Khoya",
+      "phoneNumber": "2345667902",
+      "email": "abhishek@gmail.com",
+      "userName": "abhishekkhoya",
+      "password": "abhishek1234",
+      "id": 2
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

@@ -1,0 +1,48 @@
+<br>
+<mat-card class="form">
+    <mat-card-header>
+        <h1>Contact Form</h1>
+    </mat-card-header>
+    <mat-card-content>
+        <div mat-dialog-content>
+            <form [formGroup]="contactForm">
+                <mat-form-field class="example-full-width">
+                    <mat-label>Contact Name</mat-label>
+                    <input matInput formControlName="name" placeholder="Contact Name"><mat-icon
+                        matSuffix>person</mat-icon>
+                    <mat-error *ngIf="contactForm.controls['name'].hasError('required')">Contact Name is
+                        required</mat-error>
+                    <mat-error *ngIf="contactForm.controls['name'].hasError('pattern')">Only Alphabates</mat-error>
+                </mat-form-field>
+                <br>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Email</mat-label>
+                    <input matInput formControlName="email"><mat-icon matSuffix>email</mat-icon>
+                    <mat-error *ngIf="contactForm.controls['email'].hasError('emailAddress')">
+                        Please enter a valid email address
+                    </mat-error>
+                    <mat-error *ngIf="contactForm.controls['email'].hasError('required')">
+                        Email is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+                <br>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Mobile Number</mat-label>
+                    <input matInput formControlName="mobileno" type="number"><mat-icon matSuffix>dialpad</mat-icon>
+                    <mat-error *ngIf="contactForm.controls['mobileno'].hasError('required')">Phone Number
+                        required</mat-error>
+                    <mat-error *ngIf="contactForm.controls['mobileno'].hasError('pattern')">&nbsp;Please enter 10 Digit
+                        Phone Number</mat-error>
+                </mat-form-field>
+                <br>
+                <div mat-dialog-actions align="end">
+
+                    <button style="margin: left 8px;" mat-raised-button color="primary"
+                        (click)="createContact()">Save</button>
+
+                </div>
+                <!-- <button mat-raised-button color="primary" (click)="CreateContact()">Submit</button>&nbsp; -->
+            </form>
+        </div>
+    </mat-card-content>
+</mat-card>

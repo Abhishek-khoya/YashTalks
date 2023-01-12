@@ -74,6 +74,12 @@ import { provideFunctions,getFunctions } from '@angular/fire/functions';
 import { provideMessaging,getMessaging } from '@angular/fire/messaging';
 import { providePerformance,getPerformance } from '@angular/fire/performance';
 import { provideRemoteConfig,getRemoteConfig } from '@angular/fire/remote-config';
+import { ChatingComponent } from './chating/chating.component';
+import { AddContactComponent } from './contact/add-contact/add-contact.component';
+import { ListContactComponent } from './contact/list-contact/list-contact.component';
+import { EditContactComponent } from './contact/edit-contact/edit-contact.component';
+import { UserComponent } from './user/user.component';
+import { DetailsComponent } from './details/details.component';
 
 
 @NgModule({
@@ -82,7 +88,13 @@ import { provideRemoteConfig,getRemoteConfig } from '@angular/fire/remote-config
     RegisterComponent,
     LoginComponent,
     HomeComponent,
-    ChatComponent 
+    ChatComponent,
+    ChatingComponent,
+    AddContactComponent,
+    ListContactComponent,
+    EditContactComponent,
+    UserComponent,
+    DetailsComponent,
   ],
   imports: [
     BrowserModule,

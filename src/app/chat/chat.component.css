@@ -1,7 +1,7 @@
-.example-form
+/* .example-form
 {
     width: 92%;
-}
+}*/
 .contactCard
 {
     margin-left: 10px;
@@ -10,16 +10,72 @@
 .chatCard
 {
     margin-right: 10px;
-    height:500px
+    height:442px
 }
 .messageCard
 {
     margin-right:10px;
 }
+/*
 .messageBubble
 {
     width:auto;
     height:auto;
     background-color: lightseagreen;
     border-radius: 5px;
+} */
+
+.chatBubbleContainer
+{
+    border-radius: 5px; 
+    padding: 5px; 
+    /* background-color:whitesmoke; */
+    display:flex;
+    justify-content: flex-start;
+    width: 90%;
 }
+.chatBubble
+{
+    background: white;
+    padding-top: 8px;
+    padding-bottom: 18px;
+    padding-left: 8px;
+    padding-right: 100px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    width: fit-content;
+    /* position: relative; */
+}
+.chatDate
+{
+    position:absolute;
+    bottom: 2px;
+    right: 8px;
+    font-size: 0.7rem;
+}
+
+#history {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2px;
+    padding-right: 2px;
+    width: 700px;
+    height:60%;
+    height:350px;
+    overflow-y: scroll;
+    /* overflow-y: hidden; */
+  }
+  
+  #message {
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+  }
+  
+  .fw {
+    width: 100%
+  }
+  
+  .mb {
+    margin-bottom: 1em;
+  }

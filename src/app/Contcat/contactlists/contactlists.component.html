@@ -1,0 +1,10 @@
+
+<h3>Contacts lists</h3>
+<div style="border: solid 2px #000; width:30%;">
+<mat-list *ngFor="let item of allContacts">
+  <mat-list-item style="padding-bottom: 0px;">
+    <span matListItemTitle> <a class="achrtag" [routerLink]="['/contacts/edit', item.id]">{{ item.name }}</a></span>
+    <span matListItemLine>{{ item.mobileno }}</span>
+  </mat-list-item>
+</mat-list>
+</div>
